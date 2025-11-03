@@ -15,10 +15,10 @@ public class ElectronicsProduct extends Product implements Shippable{
 
     @Override
     public BigDecimal calculateShippingCost() {
-        if (weight.compareTo(BigDecimal.ZERO) > 5){
-            return price.add(new BigDecimal(128));
+        if (weight.compareTo(new BigDecimal("5")) > 0){
+            return price.add(new BigDecimal("128"));
         }
-        else return price.add(new BigDecimal(79));
+        else return price.add(new BigDecimal("79"));
     }
 
     @Override

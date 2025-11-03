@@ -1,7 +1,10 @@
 package com.example;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class Warehouse {
@@ -28,6 +31,17 @@ public class Warehouse {
 
     public boolean isEmpty(){
         return productList.isEmpty();
+    }
+
+    public void addProduct(Product productName){
+        productList.add(productName);
+    }
+
+    public void updateProductPrice(UUID uuid, BigDecimal newPrice){
+//        if (!productList.contains(uuid)){
+//            throw new NoSuchElementException("Product not found with id: ");
+//        }
+
     }
 
 }
