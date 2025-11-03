@@ -108,7 +108,7 @@ class BasicTest {
         @BeforeEach
         void setUp() {
             warehouse = Warehouse.getInstance("TestWarehouse");
-            warehouse.clearProducts(); // Ensures test isolation
+//            warehouse.clearProducts(); // Ensures test isolation
         }
 
         @Test
