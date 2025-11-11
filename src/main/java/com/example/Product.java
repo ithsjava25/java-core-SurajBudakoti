@@ -3,7 +3,7 @@ package com.example;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-public class Product {
+public abstract class Product {
     private final UUID id;
     private final String name;
     private final Category category;
@@ -32,4 +32,6 @@ public class Product {
     public void price(BigDecimal price){
         this.price = price;
     }
+    public abstract String productDetails();
 }
+
